@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theColorMixer.js"></script>
+    <title>The Color Mixer Coding Challenge</title>
+</head>
+<body>
+    <div class="container">
+        <div id="circle1">Color1</div>
+        <div id="circle2">Color2</div>
+        <div id="circle3">Mixed</div>
+        <div id="circle4">Inverted</div>
+      </div>
+      
+      <h2>The Color Mixer</h2>
+      <h3>Background</h3>
+      <p>
+        The usage of HTML, JavaScript and CSS are undoubtedly ubiquitously across the modern internet. One of the major attributes used across all three formats is the hexadecimal string representation of color.
+      </p>
+      <p>
+        More info on <a href="https://en.wikipedia.org/wiki/Web_colors">Web Colors</a>
+      </p>
+      <h3>Exercise</h3>
+      <p>
+        Retrieve two starting colors from the remote server using the provided links. Given these two colors, run these through the color decoder function to produce the secret color.  The goal of this exercise is to get the average of these two colors along with the inverse of that color.
+      </p>
+      <p>
+        You may use anything built into the JavaScript programming language, such as base conversion, but you can also do it manually.
+      </p>
+      <p>
+        The secret color is produced in two steps:
+      </p>
+      <ol>
+        <li>Average the two starting colors rounding down.
+          <ul>
+            <li>Each color channel byte should be calculated independently of one another.</li>
+            <li>For a hex string of</li>
+            <pre>#123456
+      R 12
+      G 34
+      B 56</pre>
+          </ul>
+        </li>
+        <li>Invert the resulting color from step one.
+          <ul>
+            <li>Each color channel byte or hex character should be calculated independently.</li>
+            <li>For hex string of</li>
+            <pre>#012345 // produces #FEDCBA</pre>
+          </ul>
+        </li>
+      </ol>
+      
+      <h4>Remote API</h4>
+      
+      URL:
+      Replace <span id="email">:email</span> with your email address.
+      <pre>https://ew-color-mixer.herokuapp.com/colors/:email</pre> Model:
+      <pre>{
+          "color1": "#808000",
+          "color2": "#A0522D"
+      }</pre>
+      
+      <h3>Examples</h3>
+      
+      <pre>decode("#FA8072", "#B0E0E6") // produces "#2A4F53"
+      decode("#40E0D0", "#9370DB") // produces "#96572A"</pre>
+      
+      <h3>Resources</h3>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">The Fetch API</a>
+      </p>
+      
+      <div style="margin-bottom: 500px"></div>
+    
+</body>
+</html>
+
+
+  
